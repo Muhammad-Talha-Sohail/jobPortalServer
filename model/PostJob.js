@@ -6,6 +6,7 @@ const UserSchema = new mongoose.Schema({
   jobtype: { type: String, required: true },
   experience: { type: String, required: true },
   userId: { type: String, required: true },
+  postImg:{type:String,required:true}
 
 });
 

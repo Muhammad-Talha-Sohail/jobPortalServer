@@ -3,6 +3,8 @@ const user = require("../model/userModel");
 const authController = {
   async CreateJob(req, res) {
     try {
+      const postImg = `http://localhost:5000/${req.file.path}`;
+      console.log(postImg)
       const { jobTitle, salary, location, jobtype, experience } = req.body;
       if (!jobTitle || !salary || !location || !jobtype || !experience) {
         return res.status(400).json({ message: "all fields required" });
